@@ -18,7 +18,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`http://127.0.0.1:3000/Part54_Project_SPOTIFY/${currFolder}`);
+    let a = await fetch(` /${currFolder}`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -52,14 +52,13 @@ async function getSongs(folder) {
         e.addEventListener("click", element => {
             playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim())
         })
-
     })
     return songs;
 }
 
 const playMusic = (track, pause = false) => {
     // let audio = new Audio("/Part54_Project_SPOTIFY/songss/"+ track)
-    currentSong.src = `http://127.0.0.1:3000/Part54_Project_SPOTIFY/${currFolder}/` + track
+    currentSong.src = ` /${currFolder}/` + track
     if (!pause) {
         currentSong.play();
         play.src = "img/pause.svg"
@@ -72,7 +71,7 @@ const playMusic = (track, pause = false) => {
 
 async function displayAlbums() {
     console.log("displaying albums")
-    let a = await fetch(`http://127.0.0.1:3000/Part54_Project_SPOTIFY/songs/`)
+    let a = await fetch(` /songs/`)
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
