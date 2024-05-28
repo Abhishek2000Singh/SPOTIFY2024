@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify - Web Player: Music for everyone</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="SpotifyCSS.css">
-    <link rel="stylesheet" href="Utility.css">
+    <link rel="stylesheet" href="CSS/SpotifyCSS.css">
+    <link rel="stylesheet" href="CSS/Utility.css">
 </head>
 
 <body>
@@ -76,8 +76,8 @@
             <div class="spotifyPlaylists">
                 <h1>Spotify Playlist</h1>
                 <div class="cardContainer">
-                    <div class="card ">
-                        <div class="play">
+                    <div data-folder="ncs" class="card ">
+                        <div  class="play">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 20V4L19 12L5 20Z" stroke="#000" fill="#000" stroke-width="1.5"
@@ -89,7 +89,7 @@
                         <p>Just lean back and enjoy relaxed beats.</p>
                     </div>
 
-                    <div class="card ">
+                    <div data-folder="cs" class="card ">
                         <div class="play">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +98,7 @@
                             </svg>
                         </div>
                         <img src="https://i.scdn.co/image/ab67706f00000002dec17246891b5b4eb97bdb0d" alt="">
-                        <h2>Chillout Lounge</h2>
+                        <h2>Desi Beats</h2>
                         <p>Just lean back and enjoy relaxed beats.</p>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
             </div>
         </div>
     </div>
-    <script src="SpotifyJS.js"></script>
+    <script src="JS/SpotifyJS.js"></script>
 </body>
 
 </html>
